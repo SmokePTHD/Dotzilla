@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo pacman -Sy $(cat xorg.stuff) $(cat pacman.stuff)
+bash aur

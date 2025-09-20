@@ -1,0 +1,16 @@
+#!/bin/sh
+
+pacman -Qi zsh
+if [ $? -eq 0 ]; then
+	echo 'Zsh installed!'
+else
+	pacman -Sy zsh
+fi
+
+read -p "Pick username:" uname
+mkdir -p /home/$uname
+git clone https://github.com/SmokePTHD/Dotzilla.git /home/$uname/PandorasBox
+useradd -G wheel -d /home/$uname -M -s /bin/zsh $uname
+echo $uname 'ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
+chown -R ${uname}:${uname} /home/$uname
+passwd $uname
