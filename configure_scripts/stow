@@ -1,0 +1,15 @@
+#!/bin/bash
+
+stow -v -t ~/.config/bspwm -R bspwm
+stow -v -t ~/.config/kitty -R kitty
+stow -v -t ~/.config/macchina -R macchina
+stow -v -t ~/.config/nvim -R nvim
+stow -v -t ~/.config/polybar -R polybar
+stow -v -t ~/.config/sxhkd -R sxhkd
+stow -v -t ~ -R xinit
+stow -v -t ~ -R zsh
+
+
+
+
+
