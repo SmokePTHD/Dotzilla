@@ -16,6 +16,9 @@ super + p
 super + shift + l
   betterlockscreen -l
 
+super + shift + F12
+  ~/.config/bspwm/monitors.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

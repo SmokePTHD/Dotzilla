@@ -3,6 +3,7 @@
 pgrep -x sxhkd >/dev/null || sxhkd &
 
 picom &
+copyq &
 betterlockscreen -w
 feh --bg-scale --save ~/Dotzilla/bg.png
 
